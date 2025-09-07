@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Plant</title>
+
+    <!-- tailwind and daisyui addedd -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fonst awsome cdn added -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts cdn added -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- stylesheet added -->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-    <h1>this is our website </h1>
+
+    <!-- navbar section -->
+    <nav class="bg-[#15803D]">
+        <div class="navbar  shadow-sm max-w-[1650px] mx-auto ">
+
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>About</a></li>
+                        <li>
+                            <a>Gallery</a>
+                        </li>
+                        <li><a>Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <a class=" btn-ghost text-xl text-white font-semibold">Green Plant </a>
+            </div>
+
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white ">
+                    <li><a>About</a></li>
+                    <li>
+                        <details>
+                            <summary>Gallery</summary>
+
+                        </details>
+                    </li>
+                    <li><a>Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-[#FACC15] text-[#15803D] rounded-4xl">Plant a Tree</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner section -->
+    <section class="bg-[#cff0dc]">
+
+        <div class="banner-container flex flex-col lg:flex-row  justify-between gap-10 items-center">
+
+            <div class="left-img">
+                <img class="max-w-xs md:max-w-sm lg:max-w-md h-auto" src="./assets/hero-leaf1.png" alt="">
+            </div>
+
+            <div class="middle-part text-center space-y-6">
+                <h1 class="font-bold text-3xl lg:text-5xl ">Plant a Tree, Grow a Future</h1>
+                <p class=" text-[#1F2937] ">Join our mission to plant 1 million trees and make the Earth greener for
+                    <br> future
+                    generations.</p>
+                <button class="btn bg-[#facc15] text-[#15803d]  rounded-3xl">Get Involved</button>
+            </div>
+
+            <div class="right-img">
+                <img class="max-w-xs md:max-w-sm lg:max-w-md h-auto" src="./assets/hero-leaf2.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <script src="./index.js"></script>
 </body>
+
 </html>
