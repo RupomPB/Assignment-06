@@ -101,7 +101,46 @@
     <main class="bg-[#f0fdf4]">
 
         <!-- function section  -->
-       
+        <section class="pt-[100px]">
+
+            <h1 class="text-4xl font-semibold text-center mb-10">Choose Your Trees</h1>
+
+            <!-- functions all items -->
+            <div class="main-container min-h-[500px] max-w-[1650px] w-11/12 grid grid-cols-12 mx-auto ">
+
+
+                <!--left-side categories   -->
+                <div class="col-span-2  space-y-5 ">
+                    <div>
+                        <h1 class="text-2xl font-bold ">Categories</h1>
+                    </div>
+
+
+                    <div id="categories-container" class=" ">
+                        <button onclick="loadAllPlants();" id="all-trees"
+                            class="hover:bg-[#00d390] h-12 w-full text-lg text-black plant-btn">All
+                            Trees</button>
+
+
+                    </div>
+
+                </div>
+
+                <!-- midle-side product-items -->
+                <div id="all-plants-container" class=" col-span-8 grid grid-cols-3 gap-2">
+
+
+
+                </div>
+
+                <!-- right-side  cart items -->
+                <div class="border-2 border-green-500 col-span-2">
+
+                </div>
+            </div>
+        </section>
+
+
 
 
         <!-- campaign section -->
@@ -128,7 +167,7 @@
         </section>
 
 
-       <!-- impact section -->
+        <!-- impact section -->
         <section class="pb-28 bg-[#cff0dc]">
 
             <h1 class="font-bold text-center text-4xl pt-32 pb-11  text-[#1f2937]">Our impact</h1>
@@ -136,19 +175,19 @@
             <div class="impact-container flex flex-col md:flex-row justify-center items-center gap-10 ">
 
                 <div
-                    class="bg-white text-center px-6 py-10 rounded-xl min-w-[510px]  shadow-sm transition-all duration-300  hover:bg-green-300 hover:shadow-lg hover:scale-105">
+                    class="bg-white text-center px-6 py-10 rounded-xl w-full md:min-w-[510px]  shadow-sm transition-all duration-300  hover:bg-green-300 hover:shadow-lg hover:scale-105">
                     <span class="font-bold text-3xl text-[#15803d] ">500K+</span>
                     <p class="pt-3">Trees Planted</p>
                 </div>
 
                 <div
-                    class="bg-white text-center px-6 py-10 rounded-xl min-w-[510px] transition-all duration-300  hover:bg-green-300 hover:shadow-lg hover:scale-105">
+                    class="bg-white text-center px-6 py-10 rounded-xl w-full md:min-w-[510px] transition-all duration-300  hover:bg-green-300 hover:shadow-lg hover:scale-105">
                     <span class="font-bold text-3xl text-[#15803d] ">120+</span>
                     <p class="pt-3">Communities Involved</p>
                 </div>
 
                 <div
-                    class="bg-white text-center px-6 py-10 rounded-xl min-w-[510px] transition-all duration-300  hover:bg-green-300 hover:shadow-lg hover:scale-105">
+                    class="bg-white text-center px-6 py-10 rounded-xl w-full md:min-w-[510px] transition-all duration-300  hover:bg-green-300 hover:shadow-lg hover:scale-105">
                     <span class="font-bold text-3xl text-[#15803d] ">30+</span>
                     <p class="pt-3">Countries Reached</p>
                 </div>
@@ -158,7 +197,7 @@
 
 
 
-         <!-- form section -->
+        <!-- form section -->
         <section class="bg-[#166534] py-16 flex justify-center items-center">
 
             <div class=" w-full md:max-w-[600px] space-y-6">
@@ -201,6 +240,20 @@
             <p class="text-white text-lg py-8 ">© 2025 Green Earth. All Rights Reserved.</p>
         </footer>
 
+
+        <!-- You can open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_3.showModal()">open modal</button> -->
+        <dialog id="Details_Modal" class="modal">
+            <div class="modal-box">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <div id="plant-details-container">
+
+                    
+                </div>
+            </div>
+        </dialog>
 
     </main>
 
