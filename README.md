@@ -21,13 +21,27 @@ Ans : Here is the Difference between map(), forEach(), and filter()
 
 3) What are arrow functions in ES6?
 
-Ans: Arrow functions in ES6  provide a shorter syntax for writing functions. They lexically bind the this keyword, meaning this refers to the context in which the arrow function was defined. They are best suited for concise, single-expression functions but are not ideal for methods requiring their own this.
+Ans: Arrow functions in ES6  provide a shorter syntax for writing functions. They lexically bind the 
+
+this keyword, meaning this refers to the context in which the arrow function was defined. They are 
+
+best suited for concise, single-expression functions but are not ideal for methods requiring their 
+
+own this.
 
 
 4) How does destructuring assignment work in ES6?
 
-Ans: In ES6 Destructuring allows extracting values from arrays or objects into separate variables in a concise way. It improves code readability and reduces the need for multiple variable assignments. Destructuring supports default values and renaming of variables.
+Ans: In ES6 Destructuring allows extracting values from arrays or objects into separate variables in 
+
+a concise way. It improves code readability and reduces the need for multiple variable assignments. 
+
+Destructuring supports default values and renaming of variables.
 
 5) Explain template literals in ES6. How are they different from string concatenation?
 
-Ans: Template literals are strings enclosed in backticks (`). They allow embedding expressions, multi-line strings, and dynamic string construction. They are more readable and convenient than traditional string concatenation and eliminate the need for manual string joining.
+Ans: Template literals are strings enclosed in backticks (`). They allow embedding expressions, 
+
+multi-line strings, and dynamic string construction. They are more readable and convenient than 
+
+traditional string concatenation and eliminate the need for manual string joining.
