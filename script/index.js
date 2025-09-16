@@ -92,7 +92,7 @@ displayPlantData = (plants) => {
          <div class="bg-white space-y-2 w-full  lg:w-[340px] h-[480px] p-2 shadow-xl flex flex-col justify-between rounded-lg">
 
                 <img class="object-cover w-[100%] h-[180px] rounded-lg" src="${plant.image}" alt="">
-                    <h1 id="loadPlantDetail(${plant.id})" class="font-bold text-lg">${plant.name}</h1>
+                    <h1 onclick="loadPlantDetail(${plant.id})" class="font-bold text-lg">${plant.name}</h1>
 
                         <p>${plant.description}</p>
                                 
@@ -119,14 +119,33 @@ const loadCategories = () => {
 
     fetch(url)
         .then(res => res.json())
-        .then((json) => displayCategories(json.categories));
+        .then((json) => {
+            displayCategories(json.categories);
+
+            loadAllPlants();
+        });
 }
 
 const displayCategories = (elements) => {
     // console.log(plants);
 
     const categoriesContainer = document.getElementById("categories-container");
-    // categoriesContainer.innerHTML = "";
+    categoriesContainer.innerHTML = "";
+
+    // all trees button
+    const allBtn = document.createElement("div");
+    allBtn.innerHTML = `
+
+        <button onclick="loadAllPlants();" id="all-trees"
+            class="hover:bg-[#00d390] h-12 w-full text-lg text-black plant-btn active ">All
+                            Trees
+        </button>
+    
+    `;
+    categoriesContainer.appendChild(allBtn);
+
+
+
 
     for (let element of elements) {
         console.log(element);
@@ -155,7 +174,17 @@ const loadAllPlants = () => {
 
     fetch("https://openapi.programming-hero.com/api/plants")
         .then(res => res.json())
-        .then(data => displayAllPlants(data.plants))
+        .then(data => {
+
+            removeActive();
+
+            const allTreeBtn = document.getElementById("all-trees").classList.add("active");
+
+
+            const loadAllPlantsContainer = document.getElementById("all-plants-container");
+            loadAllPlantsContainer.innerHTML = "";
+            displayAllPlants(data.plants);
+        })
         .finally(()=>spinner.classList.add("hidden"));
 }
 
